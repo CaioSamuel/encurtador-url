@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encurtador de URL</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Encurtador de URL</legend>
+        <form method="POST" action="{% url 'encurtar' %}">
+            {% csrf_token %}
+            <label for="url">URL</label>
+            <input type="text" class="url" name="url_original">  
+            <button name="Enviar">Enviar</button>
+        </form>
+    </fieldset>
+</body>
+</html>
